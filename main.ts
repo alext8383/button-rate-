@@ -103,8 +103,8 @@ let mySprite = sprites.create(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     `, SpriteKind.Player)
-mySprite.setPosition(71, 37)
-game.splash("Press buttons for six seconds")
+mySprite.setPosition(77, 21)
+game.splash("Press A(on the arcade just move your cursor there and left-click) or space key(on your keyboard in the middle bottom P.S the key with nothing on it)  for six seconds")
 pause(6000)
-let minuteScore = info.score() * 10
+let minuteScore = (info.score() - 1) * 10
 mySprite.say(minuteScore)
