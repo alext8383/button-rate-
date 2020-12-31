@@ -1,6 +1,7 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     info.changeScoreBy(1)
 })
+let minuteScore = 0
 let mySprite = sprites.create(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -106,4 +107,5 @@ let mySprite = sprites.create(img`
 mySprite.setPosition(25, 60)
 game.splash("Press buttons for six seconds")
 pause(6000)
-mySprite.say(":)")
+mySprite.say(minuteScore)
+minuteScore = info.score() * 10
